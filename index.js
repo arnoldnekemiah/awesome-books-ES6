@@ -1,4 +1,5 @@
 import BookCollection from './modules/bookCollection.js';
+import currentTime from './modules/clock.js';
 
 const bookCollection = new BookCollection();
 
@@ -11,8 +12,7 @@ form.addEventListener('submit', (e) => {
 });
 
 bookCollection.displayBooks();
-const date = new Date();
-document.getElementById('time').innerHTML = date;
+currentTime();
 
 // Single page App implementation
 const pages = document.querySelectorAll('.nav-link');
